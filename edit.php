@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
         </html>
 <?php
     } else {
-        echo "Error fetching product details.";
+        echo "Error mengambil data produk.";
     }
 } else {
     echo "Invalid request.";
