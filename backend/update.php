@@ -44,15 +44,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
             // Update the product with the new image path
             mysqli_query($db_connect, "UPDATE products SET name = '$productName', price = '$productPrice', image = '/utspwb/upload/$randomFilename' WHERE id = $productId");
 
-            echo "Product updated successfully with a new image.";
+            echo "Berhasil mengubah produk dengan gambar baru.";
         } else {
-            echo "Error uploading a new image.";
+            echo "Gagal mengubah data dengan gambar yang baru.";
         }
     } else {
         // If no new image is uploaded, update the product without changing the image path
         mysqli_query($db_connect, "UPDATE products SET name = '$productName', price = '$productPrice' WHERE id = $productId");
 
-        echo "Product updated successfully without changing the image.";
+        echo "Produk berhasil diubah tanpa menggunakan gambar baru.";
     }
 } else {
     echo "Invalid request.";
